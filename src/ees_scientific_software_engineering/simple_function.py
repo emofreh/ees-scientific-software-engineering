@@ -28,6 +28,6 @@ def multiply(a: int, b: int) -> int:
 def rms(input_array: np.ndarray) -> float:
     squared = input_array**2
     sum_squared = np.sum(squared)
-    rms = sum_squared / (input_array.size)
-    rms = np.sqrt(rms)
-    return rms
+    a = sum_squared / (input_array.size)
+    a = np.sqrt(a)
+    return a
