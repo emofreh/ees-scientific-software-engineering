@@ -29,8 +29,7 @@ dev = [
   'black',
   'isort',
   'pylint',
-  'pytest-cov',
-  'mypy'
+  'pytest-cov'
 ]
 
 [tool.setuptools.packages.find]
