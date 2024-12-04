@@ -21,5 +21,5 @@ def test_add_error():
 
 def test_rms():
     input_array = np.array([5.0, 4.0, 3.0])
-    expected_result = np.sqrt((5.0**2.0 + 4.0**2.0 + 3.0**2.0) / 3.0)  # RMS formula
+    expected_result = np.sqrt((5.0**2.0 + 4.0**2.0 + 3.0**2.0) / 3.0)
     assert np.isclose(rms(input_array), expected_result)
