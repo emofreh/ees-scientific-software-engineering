@@ -18,7 +18,8 @@ def test_add_error():
     with pytest.raises(TypeError, match="Arguments should be integers!"):
         add(a, b)
 
-def test_rms():  
-  input_array = np.array([5, 4, 3])     
-  expected_result = np.sqrt((5**2 + 4**2 + 3**2) / 3)  # RMS formula
-  assert np.isclose(rms(input_array), expected_result)
+
+def test_rms():
+    input_array = np.array([5.0, 4.0, 3.0])
+    expected_result = np.sqrt((5.0**2.0 + 4.0**2.0 + 3.0**2.0) / 3.0)  # RMS formula
+    assert np.isclose(rms(input_array), expected_result)
