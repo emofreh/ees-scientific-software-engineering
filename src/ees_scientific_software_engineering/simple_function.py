@@ -29,5 +29,5 @@ def rms(input_array: np.ndarray) -> float:
     squared = input_array**2
     sum_squared = np.sum(squared)
     rms = sum_squared / (input_array.size)
-    rms=np.sqrt(rms)
+    rms = np.sqrt(rms)
     return rms
