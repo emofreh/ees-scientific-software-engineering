@@ -18,7 +18,7 @@ classifiers = [
 ]
 requires-python = ">=3.12"
 # add dependencies of your core package, check the license first!
-dependencies = []
+dependencies = ['numpy']
 version = "0.1"
 
 [project.optional-dependencies]
@@ -30,8 +30,7 @@ dev = [
   'isort',
   'pylint',
   'pytest-cov',
-  'mypy',
-  'numpy'
+  'mypy'
 ]
 
 [tool.setuptools.packages.find]
