@@ -51,8 +51,9 @@ def test_rms_error_inf():
         input_array = np.array([np.inf, 4.0, 3.0])
         rms(input_array)
 
+
 def test_rms_incorrect_type():
     """Test with incorrect input type (not float64)."""
-    input_array = np.array([1, 2, 3], dtype=np.int64) # or any other type
-    with pytest.raises(RMSError, match='Dtype error: correct it!') as excinfo:
+    input_array = np.array([1, 2, 3], dtype=np.int64)  # or any other type
+    with pytest.raises(RMSError, match="Dtype error: correct it!") as excinfo:
         rms(input_array)
