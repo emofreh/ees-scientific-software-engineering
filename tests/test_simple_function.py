@@ -23,4 +23,4 @@ def test_rms():
     # Test case 1: Input array of integers
     input_array = np.array([5.0, 4.0, 3.0])
     expected_result = np.sqrt((5.0**2 + 4.0**2 + 3.0**2) / 3)  # RMS formula
-    assert np.isclose(rms(input_array), expected_result)
+    assert np.isclose(rms(input_array), expected_result) # Assert that the results is as expected
