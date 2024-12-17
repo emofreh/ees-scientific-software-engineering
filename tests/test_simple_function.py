@@ -24,3 +24,14 @@ def test_rms():
     input_array = np.array([5.0, 4.0, 3.0])
     expected_result = np.sqrt((5.0**2 + 4.0**2 + 3.0**2) / 3)  # RMS formula
     assert np.isclose(rms(input_array), expected_result)  # Assert that the results is as expected
+
+def test_rms_error_nan():
+    with pytest.raises(ValueError, match = "input array cannot contain nans!") as error:
+        input_array = np.array([np.nan, 4.0, 3.0])
+        rms(input_array)
+
+
+def test_rms_error_inf():
+    with pytest.raises(ValueError, match = "input array cannot contain ninfinite values!") as error:
+        input_array = np.array([np.inf, 4.0, 3.0])
+        rms(input_array)
