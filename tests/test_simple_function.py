@@ -24,3 +24,14 @@ def test_rms():
     input_array = np.array([5.0, 4.0, 3.0])
     expected_result = np.sqrt((5.0**2 + 4.0**2 + 3.0**2) / 3)  # RMS formula
     assert np.isclose(rms(input_array), expected_result)  # Assert that the results is as expected
+def test_rms_arraytype():
+    # Test case 1: Input array of integers
+    input_array = [5.0,4.0,3.0]
+    with pytest.raises(TypeError, match="Array must be of type np.ndarray"):
+        rms(input_array)
+
+def test_rms_dimension():
+    # Test case 1: Input array of integers
+    input_array = np.array([[5.0],[4.0],[3.0]])
+    with pytest.raises(TypeError, match="Array must be one dimensional"):
+        rms(input_array)
