@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from ees_scientific_software_engineering.simple_function import add, multiply, rms
+from ees_scientific_software_engineering.simple_function import RMSError, add, multiply, rms
 
 
 def test_add():
@@ -49,4 +49,11 @@ def test_rms_error_nan():
 def test_rms_error_inf():
     with pytest.raises(ValueError, match="input array cannot contain ninfinite values!") as error:
         input_array = np.array([np.inf, 4.0, 3.0])
+        rms(input_array)
+
+
+def test_rms_incorrect_type():
+    """Test with incorrect input type (not float64)."""
+    input_array = np.array([1, 2, 3], dtype=np.int64)  # or any other type
+    with pytest.raises(RMSError, match="Dtype error: correct it!") as excinfo:
         rms(input_array)
