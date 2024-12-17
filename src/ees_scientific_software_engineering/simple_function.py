@@ -26,6 +26,11 @@ def multiply(a: int, b: int) -> int:
 
 
 def rms(input_array: np.ndarray) -> float:
+    """Finds RMS value"""
+    if any(np.isnan(input_array)):
+        raise ValueError("input array cannot contain nans!")
+    if any(np.isinf(input_array)):
+        raise ValueError("input array cannot contain ninfinite values!")
     squared = input_array**2
     sum_squared = np.sum(squared)
     a = sum_squared / (input_array.size)
