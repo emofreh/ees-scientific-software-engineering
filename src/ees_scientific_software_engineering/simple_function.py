@@ -8,8 +8,6 @@ import numpy as np
 class RMSError(Exception):
     """RMS ERROR"""
 
-    pass
-
 
 def add(a: int, b: int) -> int:
     """Add two numbers
