@@ -4,6 +4,8 @@ A module with simple function
 
 import numpy as np
 
+class RMSError(Exception):
+    pass
 
 def add(a: int, b: int) -> int:
     """Add two numbers
@@ -27,6 +29,9 @@ def multiply(a: int, b: int) -> int:
 
 def rms(input_array: np.ndarray) -> float:
     """Finds RMS value"""
+    if not input_array.dtype == np.float64:
+        raise RMSError('Dtype error: correct it!')
+
     squared = input_array**2
     sum_squared = np.sum(squared)
     a = sum_squared / (input_array.size)
