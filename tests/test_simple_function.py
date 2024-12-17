@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
 
-from ees_scientific_software_engineering.simple_function import add, multiply, rms, RMSError
+from ees_scientific_software_engineering.simple_function import RMSError, add, multiply, rms
 
 
 def test_add():
