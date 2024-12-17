@@ -27,9 +27,9 @@ def multiply(a: int, b: int) -> int:
 
 def rms(input_array: np.ndarray) -> float:
     """Finds RMS value"""
-    if not  isinstance(input_array, np.ndarray):
+    if not isinstance(input_array, np.ndarray):
         raise TypeError("Array must be of type np.ndarray")
-    if input_array.ndim !=1:
+    if input_array.ndim != 1:
         raise TypeError("Array must be one dimensional")
     squared = input_array**2
     sum_squared = np.sum(squared)
