@@ -26,6 +26,7 @@ def multiply(a: int, b: int) -> int:
 
 
 def rms(input_array: np.ndarray) -> float:
+    """Finds RMS value"""
     squared = input_array**2
     sum_squared = np.sum(squared)
     a = sum_squared / (input_array.size)
